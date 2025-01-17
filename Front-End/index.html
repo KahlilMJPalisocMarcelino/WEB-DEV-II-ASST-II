@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aklat - Para Sa Lahat</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!--FAVICON-->
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+
+</head>
+<body>
+
+          <!--HOME - NAVBAR SECTION-->
+
+            <div class="navbar">
+              <div class="logo">
+                  <img src="Images/AklatLogoHeader.png" alt="Logo">
+                  <span class="navbartext">Aklat. Para Sa Lahat.</span>
+              </div>
+
+              <div class="menu">
+                  <a href="#">Home</a>
+                  <a href="#">Featured</a>
+                  <a href="#">Contact Us</a>
+              </div>
+              <div class="actions">
+                  <button id="signup-btn">Sign Up</button>
+                  <button id="login-btn">Login</button>
+              </div>
+          </div>
+
+          <!-- HOME PAGE - BACKGROUND VIDEO -->
+          <div id="home-page" class="video-container">
+              <video autoplay muted loop>
+                  <source src="Videos/Underground Store In Manila.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              <div class="video-overlay"></div>
+          </div>
+
+          <!-- SIGN UP FORM -->
+          <div id="signup-page" class="hidden page full-page">
+            <div class="form-container">
+                <span class="close-form" id="close-signup">X</span>
+                <h2>Sign Up</h2>
+                <input type="text" id="signup-name" placeholder="Full Name" />
+                <input type="email" id="signup-email" placeholder="Email" />
+                <input type="password" id="signup-password" placeholder="Password" />
+                <button id="signup-submit">Sign Up</button>
+                <div id="signup-error" class="hidden"></div>
+            </div>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div id="login-page" class="hidden page full-page">
+            <div class="form-container">
+                <span class="close-form" id="close-login">X</span>
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email" />
+                <input type="password" id="login-password" placeholder="Password" />
+                <button id="login-submit">Login</button>
+                <div id="login-error" class="hidden"></div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+
+        <!-- ABOUT US SECTION -->
+        <div class="about-us-container">
+          <div class="about-us-card">
+
+            <div class="image-section">
+              <img src="Images/aboutUsPic.png" alt="Aklat's About Us">
+          </div>
+          
+            <div class="text-section">
+              <h2 class="about-us-title">Aklat's Mission, Vision and Goals: 2025 Overview</h2>
+              <p class="about-us-description">
+              Here at Aklat, we celebrate the rich and diverse heritage of Filipino literature and culture. 
+              Our mission is to connect readers worldwide with the timeless stories, profound wisdom, 
+              and vibrant voices of Filipino authors. Whether you're exploring the classics, discovering 
+              modern masterpieces, or delving into children's tales that inspire young minds, our curated 
+              selection of books brings the essence of the Philippines to life. Join us in preserving and 
+              promoting the beauty of Filipino literature as we bridge generations and cultures, one story 
+              at a time... | Read More
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+      <!-- DISCOUNT SECTION -->
+        <div class="discount_image">
+          <div class="image">
+              <img src="Images/Discount.jpg" alt="50% Discount Picture" class="aboutus_image" />
+          </div>
+          <div class="discount_text">
+            <p class="fifty_percent">Available Discounts</p>
+            <p class="fifty_text">
+           Take advantage of our monthly book stalls where we offer discounts on signed books from your favorite writers. Here at Aklat, we also offer a membership card where any reader like you can consistently support us as you buy more books with us.
+            We value your commitment and loyalty towards the Aklat community therefore we felt it is most appropriate that the more books you buy, the less hassle for you should be provided. 
+            </p>
+          </div>
+        </div>
+
+        <!-- CURRENT BOOKS - AVAILABLE IN STOCK SECTION -->
+
+        <div class="in-stock-wrapper">
+          <h1 class="in-stock">Our Current Books Available In Stock</h1>
+        </div>
+
+        <div class="product-container">
+          <div class="product-card">
+            <img src="Images/Books/Trick Mirror.png" alt="Book 1">
+            <h3>Trick Mirror</h3>
+            <p class="price">AED 35.55</p>
+            <div class="stars">★★★☆☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="Images/Books/America Is Not Heart.png" alt="Book 2">
+            <h3>America Is Not The Heart</h3>
+            <p class="price">AED 40.25</p>
+            <div class="stars">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="Images/Books/Bibliolepsy.png" alt="Book 3">
+            <h3>Bibliolepsy</h3>
+            <p class="price">AED 30.00</p>
+            <div class="stars">★★★☆☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="Images/Books/How To Read Now.png" alt="Book 4">
+            <h3>How To Read Now</h3>
+            <p class="price">AED 55.55</p>
+            <div class="stars">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="Images/Books/The End of All Skies.png" alt="Book 5">
+            <h3>The End Of All Skies</h3>
+            <p class="price">AED 45.50</p>
+            <div class="stars">★★★★★</div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="Images/Books/Maramihan.png" alt="Book 6">
+            <h3>Maramihan</h3>
+            <p class="price">AED 25.00</p>
+            <div class="stars">★★★★☆</div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- CLICK FOR MORE BUTTON BELOW-->
+        <button class="more">Click For More</button>
+
+
+      <!-- BANNER - COMMUNITY LEADER SECTION-->
+      <div class="application">
+        <div class="bookclub_leader">
+            <p class="application_q">
+                <br>Want To Apply For A Leadership Role Curating Our Monthly Book Club Online Meetings?</br>
+          </p>
+            <button class="application_section">Learn More</button>
+        </div>
+      </div>
+
+      <!-- CONTACT US SECTION -->
+      <div class="contact-us">
+        <div class="contact-section">
+            <p class="contact-section__title">Any Questions? <br>Contact Us.</br></p>
+            <p class="contact-section__description">
+                We would love to get in touch with you!
+                Whether you have a question about our books, online order assistance, 
+                or anything related surrounding Aklat, feel free to reach us out.
+            </p>
+        </div>
+        <div class="contact-us-image">
+            <img src="Images/ContactUs.png" alt="Contact Aklat" class="contact-us-image__photo" />
+        </div>
+      </div>
+
+
+
+      <!-- FOOTER SECTION -->
+      <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Images/AklatLogoFooter.png" alt="Aklat Logo" />
+            </div>
+
+          <!-- NAV LINK -->
+          <div class="footer-nav">
+              <h4>Links:</h4>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Featured</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <!-- CONTACT INFO -->
+          <div class="footer-contact">
+              <h4>Contact Details:</h4>
+              <p>123 Mabuhay Street, Barangay Maligaya, Quezon City, Metro Manila, Philippines</p>
+              <p>Email: <a href="mailto:aklahat@gmail.com">aklahat@gmail.com</a></p>
+              <p>Phone: +63 912 345 6789</p>
+          </div>
+
+          <!-- SOCIAL LINKS -->
+          <div class="footer-social">
+              <h4>Follow Us:</h4>
+              <div class="social-icons">
+                  <a href="#" class="social-icon facebook"><img src="Images/facebook-icon.png" alt="Facebook"></a>
+                  <a href="#" class="social-icon linkedin"><img src="Images/linkedin-icon.png" alt="LinkedIn"></a>
+                  <a href="#" class="social-icon instagram"><img src="Images/instagram-icon.png" alt="Instagram"></a>
+              </div>
+          </div>
+      </div>
+
+      <!-- COPYRIGHT SECTION -->
+      <div class="footer-copyright">
+          <p>Copyright &copy; 2025 Aklat. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+</body>
+
+</html>
