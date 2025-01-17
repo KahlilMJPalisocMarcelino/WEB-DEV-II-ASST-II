@@ -1,0 +1,909 @@
+@font-face {  
+  font-family: 'Pilapil Sans';
+  src: url('Font/PilapilSans.otf') format("opentype");
+}
+
+* {
+  font-family: 'Pilapil Sans'; 
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFCF5;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 5px;
+  background-color: rgba(0, 0, 0);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar .logo img {
+  height: 200px;
+}
+.navbartext{
+  background-color: #000000; 
+  font-size: 2em; 
+  font-weight: bold; 
+  color: white;
+  padding: 10px; 
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 50px;
+}
+
+.navbar .menu a {
+  color: #FFFCF5;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.navbar .menu a:hover {
+  text-decoration: underline;
+}
+
+.navbar .actions {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .actions button {
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.navbar .actions button:hover {
+  background-color: #a00000;
+}
+
+/* BACKGROUND VIDEO */
+.video-container {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Covers the entire width */
+  height: 100%; /* Covers the entire height */
+  object-fit: cover; /* Ensures video fills the screen completely with no breathing space */
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+/* SIGNUP AND LOGIN */
+.full-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.hidden {
+  display: none;
+}
+
+/* FORMS STYLING */
+.form-container {
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* the "X" */
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #8b0000;
+}
+
+.form-container input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background: #8b0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-container button:hover {
+  background: #a00000;
+}
+
+/* Close "X" Icon */
+.close-form {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  color: #8b0000;
+  cursor: pointer;
+}
+
+.close-form:hover {
+  color: #a00000;
+}
+
+/* Error Messages */
+#signup-error,
+#login-error {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+}
+
+
+/* ABOUT US CONTAINER */
+.about-us-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+/* ABOUT US CARD */
+.about-us-card {
+  width: 100%;
+  max-width: 1500px;
+  background-color: #000;
+  border-radius: 8px; /* slightly rounding the corners */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out; /* smoothness of the hover */
+  margin: 20px 0;
+}
+
+
+.about-us-card:hover {
+  transform: translateY(-5px); /* slight liftness of the hover */
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.text-section {
+  padding: 30px;
+  background-color: #000000;
+  color: #FFFCF5;
+}
+
+.about-us-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #FFFCF5;
+  text-decoration: underline;
+}
+
+.about-us-description {
+  font-size: 1.5rem;
+  color: #FFFCF5;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* HOVER EFFECT */
+.about-us-card:hover .image-section img {
+  opacity: 0.9;
+}
+
+/* DISCOUNT SECTION */
+.discount_image {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  margin-top: 150px;
+  margin-bottom: 180px;
+}
+
+/* IMAGE AND ITS STYLING */
+.image {
+  width: 800px;
+  height: auto;
+  box-shadow: 20px 20px rgba(0, 0, 0);
+  margin-right: 20px;
+}
+
+/* IMAGE INSIDE THE BOX */
+.aboutus_image {
+  width: 100%;
+  height: 100%;
+  background-image: url('Images/Discount.jpg');
+}
+
+.discount_text {
+  flex: 1;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* TITLE */
+.fifty_percent {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+  border-bottom: 4px solid black;
+  display: inline;
+  padding-bottom: 5px;
+
+}
+
+/* DESCRIPTION */
+.fifty_text {
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.8;
+}
+
+/* IN STOCK SECTION */
+  .in-stock-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.in-stock {
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #000000;
+  width: 50%;
+  display: inline-block;
+}
+
+/* BOOK CARDS */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+/* ITS STYLING */
+.product-card {
+  background: #F3F3F3;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* BOOK IMAGE STYLING */
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+/* CARD TITLE STYLING */
+.product-card h3 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #090909;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PRICING STYLING */
+.price {
+  font-size: 1.5rem;
+  color: #0d5a2d;
+  margin: 10px 0;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* STAR RATING */
+.stars {
+  color: #f39c12;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  min-height: 30px;
+}
+
+/* ADD TO CARD BUTTON */
+.add-to-cart {
+  background: #0d5a2d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: auto;
+  margin-bottom: 15px;
+  align-self: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: #037432;
+  transform: translateY(-3px);
+}
+
+/* HOVER EFFECT FOR THE BOOK CARDS*/
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* MORE BUTTON */
+.more {
+  display: block;
+  width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #000802;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.more:hover {
+  background-color: #01420f; 
+}
+
+
+/* BANNER SECTION */
+.bookclub_leader {
+  position: relative;
+  background-image: url('Images/Leadership.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFCF5;
+  padding: 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.application_q {
+  position: relative;
+  font-size: 3rem;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  z-index: 2;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+
+/* LEARN MORE BUTTON */
+.application_section {
+  position: relative;
+  z-index: 2;
+  padding: 20px 45px;
+  font-size: 1.6rem;
+  background-color: #7e0f0f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.application_section:hover {
+  background-color: #731515;
+}
+
+
+/* CONTACT US SECTION */
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 50px;
+  margin-bottom: 100px;
+}
+
+.contact-section {
+  flex: 1;
+  max-width: 50%;
+  padding-left: 50px;
+}
+
+.contact-section__title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+  border-bottom: 4px solid black; /* for underline effect */
+  width: 60%; /* to make the border shorter */
+  padding-bottom: 5px;
+  line-height: 1.5;
+}
+
+.contact-section__description {
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.6; /* for readability */
+  margin-top: 0;
+}
+
+.contact-us-image {
+  position: relative;
+  flex: 1;
+  max-width: 50%;
+}
+
+.contact-us-image__photo {
+  width: 750px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 30px 30px rgba(0, 0, 0);
+}
+
+/* FOOTER SECTION */
+footer {
+  background-color: black; 
+  color: #FFFCF5;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+/* FOOTER'S CONTENT */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; 
+}
+
+/* FOOTER LOGO */
+.footer-logo img {
+  max-width: 250px;
+  margin-right: 20px;
+  align-self: flex-start; 
+}
+
+/* FOOTER NAVIGATION */
+.footer-nav {
+  flex: 1;
+  margin: 10px 20px;
+}
+
+/* LINKS */
+.footer-nav h4 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin-bottom: 10px;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #FFFCF5;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+  color: #f2a900; 
+}
+
+/* CONTACT INFO*/
+.footer-contact {
+  flex: 1;
+  margin: 10px 20px;
+}
+
+/* CONTACTS TITLE */
+.footer-contact h4 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+/* CONTACTS DESC. */
+.footer-contact p {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.footer-contact a {
+  color: #FFFCF5;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #f2a900;
+}
+
+/* FOLLOW US SECTION */
+.footer-social {
+  flex: 1;
+  margin: 10px 20px;
+}
+
+/* OUR SOCIALS*/
+.footer-social h4 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+  transform: scale(1.1); /* Slight hover effect for icons */
+}
+
+/* COPYRIGHT SECTION */
+.footer-copyright {
+  text-align: center;
+  background-color: black;
+  color: #FFFCF5;
+  font-size: 1.3rem;
+  border-top: 1px solid #FFFCF5;
+  width: 150%; 
+  max-width: 150%; 
+}
+ 
+/* RESPONSIVE DESIGN SECTION */
+
+/* DESKTOP */
+@media (max-width: 1024px) {
+  /* Background video fixes */
+  .video-container video {
+    width: 100vw; /* Stretch video to cover the entire viewport width */
+    height: 100vh; /* Stretch video to cover the viewport height */
+  }
+
+  /* About Us section adjustments */
+  .about-us-container {
+    justify-content: center; /* Centers the entire article card */
+    padding: 20px; /* Adds some space around the card */
+  }
+
+  .about-us-card {
+    margin: 0 auto; /* Centers the card horizontally */
+    width: 90%; /* Adjust width to prevent it from being too wide */
+  }
+
+  /* Discount section adjustments */
+  .discount_text {
+    font-size: 1.4rem; /* Makes text smaller */
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+
+  .fifty_percent {
+    font-size: 2.5rem; /* Adjust title size */
+  }
+
+  .discount_image {
+    flex-direction: column; /* Stacks image and text vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .image {
+    max-width: 80%; /* Ensures the image doesn't stretch too much */
+    margin-bottom: 20px; /* Space between image and text */
+  }
+
+  /* Current books section */
+  .in-stock-wrapper {
+    text-align: center; /* Centers the "Our Current Books" title */
+  }
+
+  .product-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Keeps spacing even */
+    justify-content: center; /* Centers the cards */
+    gap: 20px; /* Adds space between cards */
+  }
+
+  .more {
+    margin: 20px auto; /* Centers the button */
+    text-align: center;
+  }
+
+  /* Banner section adjustments */
+  .bookclub_leader {
+    background-size: cover; /* Ensures it fills the screen */
+    background-position: center;
+    height: auto;
+    padding: 30px;
+  }
+
+  .application_q {
+    text-align: center;
+    font-size: 2.5rem; /* Adjust question size */
+  }
+
+  .application_section {
+    margin: 20px auto; /* Centers the button */
+    text-align: center;
+  }
+
+  /* Contact Us section adjustments */
+  .contact-us {
+    flex-direction: column; /* Stacks content vertically */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .contact-section {
+    margin-bottom: 20px;
+    padding: 0 20px; /* Adds space around text */
+  }
+
+  .contact-us-image__photo {
+    max-width: 80%; /* Reduces image size */
+    margin: 0 auto; /* Centers the image */
+  }
+
+  /* Footer adjustments */
+  footer {
+    background-color: black;
+    padding: 20px 10px;
+  }
+
+  .footer-content {
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-logo img {
+    margin: 0 auto;
+  }
+
+  .footer-nav,
+  .footer-contact,
+  .footer-social {
+    text-align: center;
+  }
+
+  .footer-copyright {
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile screens (max-width: 375px) */
+@media (max-width: 375px) {
+
+  /* Navbar */
+  .navbartext {
+    display: none; /* Hide the text part of the navbar */
+  }
+
+  .navbar .menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  
+  .navbar .logo img {
+    height: 80px; /* Smaller logo for smaller screens */
+  }
+  
+  .navbar .menu a {
+    font-size: 1.4em;
+  }
+  
+  .navbar .actions button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+
+  /* Background Video */
+  .video-container video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  /* About Us Section */
+  .about-us-card {
+    max-width: 95%;
+    margin: 15px auto;
+  }
+  
+  .about-us-title {
+    font-size: 1.3rem;
+  }
+  
+  .about-us-description {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+
+  /* Discount Section */
+  .discount_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .image {
+    width: 90%;
+  }
+
+  .discount_text {
+    text-align: center;
+  }
+
+  .fifty_percent {
+    font-size: 1.3rem;
+  }
+
+  /* In Stock Section */
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px;
+  }
+
+  .product-card {
+    padding: 8px;
+  }
+
+  .in-stock-wrapper {
+    text-align: center;
+  }
+
+  .more {
+    font-size: 1.1rem;
+  }
+
+  /* Banner Section */
+  .bookclub_leader {
+    height: 260px;
+  }
+
+  .application_q {
+    font-size: 1.7rem;
+  }
+
+  .application_section {
+    font-size: 1.1rem;
+  }
+
+  /* Contact Us Section */
+  .contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+  }
+  
+  .contact-us-image__photo {
+    width: 30%;
+    height: 30%;
+  }
+
+  /* Footer Section */
+  footer {
+    padding: 16px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-logo img {
+    max-width: 180px;
+  }
+  
+  .footer-nav ul li a {
+    font-size: 1.1rem;
+  }
+}
